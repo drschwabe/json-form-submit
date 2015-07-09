@@ -4,6 +4,7 @@
   "description": "Client-side form handler that converts forms into a tidy little object you can more easily work with.",
   "main": "form-object.js",
   "dependencies": {
+    "form-serialize": "^0.6.0",
     "jquery": "^2.1.4",
     "underscore": "^1.8.3"
   }
