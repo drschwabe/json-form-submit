@@ -1,8 +1,10 @@
 ##  JSON Form Submit
 
-Client-side form handler that simplifies submissions while giving you control. Converts forms into a tidy little object abnd will optionally post said object to your server.
+Client-side form handler that simplifies submissions while giving you control.  Converts forms into a tidy little object and will optionally post said object to your server.
 
-It leverages the browser's default behavior of handling form submissions (free UI for basic field validation like email or required fileds) while preventing the actual submission itself until you after you have run the first callback so in this way you have less work to do with your own custom validation or you could simply not do any extra validation but maybe do some UI changes in that first callback - and tweak the UI again when the response arrives. 
+It leverages the browser's default behavior of handling form submissions (free UI for basic field validation like email or required fields) while preventing the actual submission itself until you after you have run the first callback. 
+
+So in this way you have less work to do with your own custom validation or for example you could simply not do any extra validation but maybe do some UI changes in that first callback - and tweak the UI again when the response arrives. 
 
 Install: 
 ```

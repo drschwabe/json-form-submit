@@ -1,7 +1,7 @@
 {
   "name": "json-form-submit",
   "version": "0.0.1",
-  "description": "Client-side form handler that converts forms into a tidy JSON object and optionally posts to your server.",
+  "description": "Client-side form handler that simplifies submissions while giving you control.",
   "main": "json-form-submit.js",
   "license": "MIT",  
   "author": {
