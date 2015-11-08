@@ -19,8 +19,6 @@ module.exports = function(form, postURL, prePost, callback) {
   $(form).submit(function(event) {
     event.preventDefault() //< Prevent page reload as per default HTML submit behavior.
 
-    console.log($(form)[0])
-
     //Convert the form to a tidy little object:
     var formObj = serialize($(form)[0], { hash: true })
 
@@ -42,6 +40,10 @@ module.exports = function(form, postURL, prePost, callback) {
     } else if(_.isFunction(postURL)) {
       //If postURL is a function, we assume it's the callback:
       postURL = callback
+      callback(formObj)
+    }
+    //(if postURL is null, nothing will be posted to server)    
+    else {
       callback(formObj)
     }
   })
