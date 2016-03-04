@@ -41,7 +41,7 @@ jsonForm({
   post_url: 'http://localhost:4550/register', 
   pre_post: function(form) {
     console.log(form) //< { first_name: 'Jaromir', last_name: 'Jagr' }    
-    //Do stuff before form submitted to server (custom validation, change DOM to relfect "submitting" state, etc):
+    //Do stuff before form submitted to server (custom validation, change DOM to reflect "submitting" state, etc):
     $('button').html('registering...')
     $('#spinner').show()
   }, function(form, res) {

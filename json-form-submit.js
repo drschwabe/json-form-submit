@@ -20,7 +20,7 @@ module.exports = function(param1, callback) {
     }
 
     if(jform.post_url) {
-      $.post(post_url, formObj, function(res) {
+      $.post(jform.post_url, formObj, function(res) {
         return callback(formObj, res)
       }, 'json')
     }
