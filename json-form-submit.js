@@ -10,7 +10,7 @@ module.exports = function(param1, callback) {
   else jform = param1 //< Object supplied
 
   //Form handler:
-  $('#' + jform.form_id).submit(function(event) {
+  $('body').on('submit', '#' + jform.form_id, function(event) {
     event.preventDefault() //< Prevent page reload as per default HTML submit behavior.
     //Convert the form to a tidy little object:
     var formObj = serialize($('#' + jform.form_id)[0], { hash: true })
