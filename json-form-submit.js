@@ -18,7 +18,9 @@ module.exports = function(param1, callback) {
     if(jform.pre_post) {
       //Call the pre_post function and update the formObj's value to the return
       //value of said function.
-      formObj = jform.pre_post(formObj)
+      var prePostFormObj = jform.pre_post(formObj)
+      //Only update the formObj if a return value was provided: 
+      if(prePostFormObj) formObj = prePostFormObj
     }
 
     if(jform.post_url) {
