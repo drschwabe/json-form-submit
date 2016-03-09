@@ -16,7 +16,9 @@ module.exports = function(param1, callback) {
     var formObj = serialize($('#' + jform.form_id)[0], { hash: true })
 
     if(jform.pre_post) {
-      jform.pre_post(formObj)
+      //Call the pre_post function and update the formObj's value to the return
+      //value of said function.
+      formObj = jform.pre_post(formObj)
     }
 
     if(jform.post_url) {

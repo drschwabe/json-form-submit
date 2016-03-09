@@ -23,7 +23,7 @@ Usage:
 ```
 
 ```
-\\JS (via browserify)
+//JS (via browserify)
 var jsonForm = require('json-form-submit')
 
 jsonForm('register', function(form) { //< First parameter is the ID of your form.
