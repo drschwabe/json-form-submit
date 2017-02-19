@@ -40,10 +40,11 @@ jsonForm({
   form_id: 'register', 
   post_url: 'http://localhost:4550/register', 
   pre_post: function(form) {
-    console.log(form) //< { first_name: 'Jaromir', last_name: 'Jagr' }    
-    //Do stuff before form submitted to server (custom validation, change DOM to reflect "submitting" state, etc):
-    $('button').html('registering...')
-    $('#spinner').show()
+      console.log(form) //< { first_name: 'Jaromir', last_name: 'Jagr' }    
+      //Do stuff before form submitted to server (custom validation, change DOM to reflect "submitting" state, etc):
+      $('button').html('registering...')
+      $('#spinner').show()
+    }
   }, function(form, res) {
     //Form has been posted to server, now do stuff
     //(reset DOM state, handle response, etc):
