@@ -1,6 +1,6 @@
 {
   "name": "json-form-submit",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Client-side form handler that simplifies submissions while giving you control.",
   "main": "json-form-submit.js",
   "license": "MIT",  
@@ -21,8 +21,8 @@
     "convert"
   ],    
   "dependencies": {
-    "form-serialize": "^0.6.0",
-    "jquery": "^2.1.4",
-    "underscore": "^1.8.3"
+    "form-serialize": "0.6.0",
+    "jquery": "3.3.1",
+    "underscore": "1.8.3"
   }
 }
