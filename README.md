@@ -13,16 +13,16 @@ npm install json-form-submit
 
 Usage:
 
-```
+```html
 <!-- HTML: -->
-<form id="myForm">
+<form id="register">
     <input name="first_name" required />
     <input name="last_name" />
     <button>Register</button>                
 </form>
 ```
 
-```
+```javascript
 //JS (via browserify)
 var jsonForm = require('json-form-submit')
 
@@ -35,7 +35,7 @@ jsonForm('register', function(form) { //< First parameter is the ID of your form
 
 You can also supply a post URL and a pre-post function.  To do this, supply an object followed by the callback.  If you do it this way, the callback will return with an extra object containing the response from the post event.  Ex: 
 
-```
+```javascript
 jsonForm({
   form_id: 'register', 
   post_url: 'http://localhost:4550/register', 
