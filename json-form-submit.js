@@ -8,7 +8,6 @@ module.exports = function(param1, callback) {
 
   //Form handler:
   document.getElementById(jform.form_id).addEventListener("submit", function(event){
-  // $('body').on('submit', '#' + jform.form_id, function(event) {
     event.preventDefault() //< Prevent page reload as per default HTML submit behavior.
     //Convert the form to a tidy little object:
     var formObj = serialize(document.getElementById(jform.form_id), { hash: true })
@@ -22,16 +21,16 @@ module.exports = function(param1, callback) {
     }
 
     if(jform.post_url) {
-      var xhr = new XMLHttpRequest();
-      xhr.open("POST", jform.post_url, true);
-      xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+      var xhr = new XMLHttpRequest()
+      xhr.open("POST", jform.post_url, true)
+      xhr.setRequestHeader('Content-type','application/json; charset=utf-8')
       xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
-          var json = JSON.parse(xhr.responseText);
+          var json = JSON.parse(xhr.responseText)
         }
       }
-      var data = JSON.stringify(formObj);
-      xhr.send(data);
+      var data = JSON.stringify(formObj)
+      xhr.send(data)
     }
 
     //Else:
