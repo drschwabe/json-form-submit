@@ -27,6 +27,7 @@ module.exports = function(param1, callback) {
       xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
           var json = JSON.parse(xhr.responseText)
+          return callback(formObj, json)
         }
       }
       var data = JSON.stringify(formObj)
