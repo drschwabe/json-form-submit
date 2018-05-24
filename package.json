@@ -1,6 +1,6 @@
 {
   "name": "json-form-submit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Client-side form handler that simplifies submissions while giving you control.",
   "main": "json-form-submit.js",
   "license": "MIT",
