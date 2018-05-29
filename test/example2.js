@@ -1,4 +1,4 @@
-var jsonForm = require('json-form-submit')
+var jsonForm = require('../json-form-submit.js')
 
 window.errs = {
   no_form : 0, 
