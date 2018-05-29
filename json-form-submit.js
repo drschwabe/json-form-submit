@@ -18,9 +18,7 @@ module.exports = function(param1, callback) {
       var prePostFormObj = jform.pre_post(formObj)
       //Only update the formObj if a return value was provided:
       if(prePostFormObj) formObj = prePostFormObj
-    }
-
-    if(jform.post_url) {
+    } else if (jform.post_url) {
       var xhr = new XMLHttpRequest()
       xhr.open("POST", jform.post_url, true)
       xhr.setRequestHeader('Content-type','application/json; charset=utf-8')
@@ -32,9 +30,8 @@ module.exports = function(param1, callback) {
       }
       var data = JSON.stringify(formObj)
       xhr.send(data)
+    } else {
+      return callback(formObj)
     }
-
-    //Else:
-    return callback(formObj)
   })
 }
