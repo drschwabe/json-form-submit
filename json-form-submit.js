@@ -3,8 +3,11 @@ var serialize = require('form-serialize')
 module.exports = function(param1, callback) {
 
   var jform = {}
-  if(typeof param1 == 'string') jform.form_id = param1 //< String supplied.
-  else jform = param1 //< Object supplied
+  if(typeof param1 === 'string') {
+    jform.form_id = param1 //< String supplied.
+  } else if(typeof param1 !== 'function') {
+    jform = param1 //< Object supplied
+  }
 
   //Form handler:
   document.getElementById(jform.form_id).addEventListener("submit", function(event){
