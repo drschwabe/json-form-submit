@@ -21,14 +21,16 @@ module.exports = function(param1, callback) {
       var prePostFormObj = jform.pre_post(formObj)
       //Only update the formObj if a return value was provided:
       if(prePostFormObj) formObj = prePostFormObj
-    } else if (jform.post_url) {
+    } 
+    
+    if (jform.post_url) {
       var xhr = new XMLHttpRequest()
       xhr.open("POST", jform.post_url, true)
       xhr.setRequestHeader('Content-type','application/json; charset=utf-8')
       xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
-          var json = JSON.parse(xhr.responseText)
-          return callback(formObj, json)
+          let response = JSON.parse(xhr.responseText)
+          return callback(formObj, response)
         }
       }
       var data = JSON.stringify(formObj)
